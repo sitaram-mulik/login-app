@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/helpers';
+
+@import './form.scss';
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.home-wrapper {
+    @include desktop-only {
+        background-position-y: -11rem;
+        animation-name: curtain;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+}

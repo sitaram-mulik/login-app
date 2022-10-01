@@ -1,0 +1,44 @@
+.bg-primary {
+    background: $primaryColor;
+}
+
+.text-primary {
+    color: $primaryColor;
+}
+
+.text-error {
+    color: $errorColor;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.error {
+    input {
+        border-color: $errorColor;
+        color: $errorColor;
+    }
+}
+
+.bg-accent {
+    background: $accentColor;
+}
+
+.text-accent {
+    color: $accentColor;
+}
+
+.bg-curtain {
+    @include desktop-only {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes curtain {
+    from {
+        background-position-y: -2rem;
+    }
+    to {
+        background-position-y: -11rem;
+    }
+}
